@@ -1,0 +1,36 @@
+/* 
+1. Determine os tamanhos de fontes para os elementos com textos 
+dentro do corpo das tags <h1>, <li> e <p>, sendo que o h1 deve ser 
+centralizado e as tags p e li devem ter um espaçamento de 2.
+2. Indique uma cor de fundo para toda a página HTML. 
+3. Crie uma classe com o nome alinhado que define seus 
+componentes com inline.
+4. Crie uma classe com o nome bloco que define seus comentes como 
+block.
+*/
+
+body {
+    background-color: yellow;
+}
+
+.a {
+    text-align: center;
+}
+
+p {
+    line-height: 2;
+}
+
+li {
+    line-height: 2;
+}
+
+.alinhado {
+    display: inline;
+    padding-right: 50px;
+}
+
+.bloco {
+    display: block;
+    padding-top: 50px;
+}
