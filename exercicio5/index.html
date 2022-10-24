@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="functions.js">
+    <title>Exercicio 5</title>
+    <script>
+        //1. Crie duas variáveis com o valor 10 e 100. Mostre o valor da soma, subtração, divisão e multiplicação em um ALERT.
+        function soma() {
+            var num1 = 10;
+            var num2 = 100;
+            alert("Soma = " + (parseFloat(num1) + parseFloat(num2)));
+        }
+
+        function sub() {
+            var num1 = 10;
+            var num2 = 100;
+            alert("Subtração = " + (parseFloat(num1) - parseFloat(num2)));
+        }
+
+        function div() {
+            var num1 = 10;
+            var num2 = 100;
+            alert("Divisão = " + (parseFloat(num1) / parseFloat(num2)));
+        }
+
+        function mult() {
+            var num1 = 10;
+            var num2 = 100;
+            alert("Multiplicação = " + (parseFloat(num1) * parseFloat(num2)));
+        }
+
+        // <h5>2. Crie um loop que mostre na tela o valor de 10 a 100.</h5>
+
+        function loop() {
+            var num = "";
+            for (var i = 10; i <= 100; i += 1) {
+                num += i + " | ";
+            }
+            alert(num);
+        }
+
+        //3. Crie uma variável que recebe o valor fixo 5. Mostre a tabuada desse número.
+
+        function tabuada5() {
+            var i;
+            var tab5 = 5;
+            var resultado = document.getElementById('resultado');
+            var tabuada5 = '';
+            for (i = 1; i <= 10; i++) {
+                tabuada5 += tab5 + " x " + i + " = " + tab5 * i + "<br />";
+
+                resultado.innerHTML = tabuada5;
+            }
+        }
+
+        //4. Adapte o exercício anterior para o valor não ser mais fixo.O valor deve ser recebido de um campo da tela.
+
+        function tabuada() {
+            var num = parseInt(document.getElementById("num").value);
+            var resposta = document.getElementById('resposta');
+            var tabuada = '';
+
+            for (var count = 1; count <= 10; count++)
+                tabuada += num + " x " + count + " = " +
+                num * count + "<br />";
+
+            resposta.innerHTML = tabuada;
+        }
+
+        //5. Fazer um calculadora que receberá dois valores e a operação(+, -, * , /). Ao clicar no botão calcular o resultado é demonstrado.
+
+        function soma1() {
+            var num1 = document.getElementById('txtNum1');
+            var num2 = document.getElementById('txtNum2');
+            document.getElementById('calculadoraResultado').value = parseFloat(num1.value) + parseFloat(num2.value);
+        }
+
+        function sub1() {
+            var num1 = document.getElementById('txtNum1');
+            var num2 = document.getElementById('txtNum2');
+            document.getElementById('calculadoraResultado').value = parseFloat(num1.value) - parseFloat(num2.value);
+        }
+
+        function div1() {
+            var num1 = document.getElementById('txtNum1');
+            var num2 = document.getElementById('txtNum2');
+            document.getElementById('calculadoraResultado').value = parseFloat(num1.value) / parseFloat(num2.value);
+        }
+
+        function mult1() {
+            var num1 = document.getElementById('txtNum1');
+            var num2 = document.getElementById('txtNum2');
+            document.getElementById('calculadoraResultado').value = parseFloat(num1.value) * parseFloat(num2.value);
+        }
+
+        // 6. Percorra o array [1,2,3,4,5,6,7,8,9,10] e exiba apenas os valores pares.
+
+        function par() {
+            var num = parseInt(document.getElementById("resultadoPar").value);
+            var resposta = document.getElementById('resultadoPar');
+            let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            let pares = [];
+
+            for (let i = 1; i <= array.length; i++) {
+                if (i % 2 == 0) {
+                    pares.push(i);
+                }
+            }
+            resposta.innerHTML = pares;
+        }
+
+        /*7. O custo de um carro novo ao consumidor é obtido com a seguinte fórmula:
+        custo final = custo de fábrica + (custo de fábrica * percentual do distribuidor)
+        + (custo de fábrica * percentual de impostos)
+        O usuário terá uma tela para entrar com os valores:
+        custo de fábrica => nome do input custoFabrica %
+        distribuidor => nome do input percDistribuidor %
+        impostos => nome do input percImpostos
+        Valor final => nome do input valorfinal
+        Deverá executar o cálculo e demonstrar o resultado no“ valorfinal”
+        quando clicar no botão“ btncalcular”.*/
+
+        function
+        btncalcular() {
+            var custoFabrica = document.getElementById('custoFabrica');
+            var percDistribuidor = document.getElementById('percDistribuidor');
+            var percImpostos = document.getElementById('percImpostos');
+            var valorfinal = document.getElementById('valorfinal');
+
+            document.getElementById('valorfinal').value =
+                parseFloat(custoFabrica.value) + (parseFloat(custoFabrica.value) * (parseFloat(percDistribuidor.value) / 100)) +
+                (parseFloat(custoFabrica.value) * (parseFloat(percImpostos.value) / 100));
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="  align-items-center justify-content-center">
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="align-items-center ">
+                <h5>1. Crie duas variáveis com o valor 10 e 100. Mostre o valor da soma, subtração, divisão e multiplicação em um ALERT.</h5>
+                <button onclick="soma()" class="tn btn-primary btn-lg m-3">Soma</button>
+                <button onclick="sub()" class="tn btn-primary btn-lg m-3">Subtração</button>
+                <button onclick="div()" class="tn btn-primary btn-lg m-3">Divisão</button>
+                <button onclick="mult()" class="tn btn-primary btn-lg m-3">Multiplicação</button>
+            </div>
+            <br>
+            <hr>
+
+            <div>
+                <h5>2. Crie um loop que mostre na tela o valor de 10 a 100.</h5>
+                <div class="txtResultado"></div>
+                <button onclick="loop()" class="tn btn-primary btn-lg m-3">Loop</button>
+            </div>
+            <br>
+            <hr>
+            <div>
+                <h5>3. Crie uma variável que recebe o valor fixo 5. Mostre a tabuada desse número.</h5>
+                <button onclick="tabuada5()" class="tn btn-primary btn-lg m-3">Tabuada</button>
+                <br>
+                <div id='resultado' style='display:inline'></div>
+
+            </div>
+            <br>
+            <hr>
+            <div>
+                <h5>4. Adapte o exercício anterior para o valor não ser mais fixo. O valor deve ser recebido de um campo da tela.</h5>
+                Qual tabuada deseja ver: <input id="num" type="number" class="form-control  col-3"> <br />
+                <button onclick="tabuada()" class="tn btn-primary btn-lg m-3">Exibir</button>
+                <div id='resposta' style='display:inline'></div>
+
+            </div>
+            <br>
+            <hr>
+            <div>
+                <h4>5. Fazer um calculadora que receberá dois valores e a operação (+,-,*,/). Ao clicar no botão calcular o resultado é demonstrado.</h4>
+                <h5>Primeiro Número</h5>
+                <input type="text" id="txtNum1" class=" col-6">
+                <h5>Segundo Número</h5>
+                <input type="text" id="txtNum2" class=" col-6">
+                <div>
+                    <button onclick="soma1()" class="tn btn-primary btn-lg m-3">+</button>
+                    <button onclick="sub1()" class="tn btn-primary btn-lg m-3">-</button>
+                    <button onclick="div1()" class="tn btn-primary btn-lg m-3">/</button>
+                    <button onclick="mult1()" class="tn btn-primary btn-lg m-3">X</button>
+                </div>
+                <div>
+                    Resultado é: <input type="text" id="calculadoraResultado" class="form-control  col-10">
+                </div>
+            </div>
+            <br>
+            <hr>
+            <div>
+                <h5>6. Percorra o array [1,2,3,4,5,6,7,8,9,10] e exiba apenas os valores pares.</h5>
+                <button onclick="par()" class="tn btn-primary btn-lg m-3">Resultado</button>
+                <div>
+                    Os números pares são:
+                    <!-- <input type="text" id="resultadoPar" class="form-control  col-10"> -->
+                    <div id="resultadoPar" class="form-control  col-10"></div>
+                </div>
+            </div>
+            <br>
+            <hr>
+            <div>
+                <h5>7. O custo de um carro novo ao consumidor é obtido com a seguinte fórmula: custo final = custo de fábrica + (custo de fábrica * percentual do distribuidor) + (custo de fábrica * percentual de impostos) <br> O usuário terá uma tela para
+                    entrar com os valores: <br> custo de fábrica => nome do input custoFabrica <br> % distribuidor => nome do input percDistribuidor <br> % impostos => nome do input percImpostos <br> Valor final => nome do input valorfinal <br> Deverá
+                    executar o cálculo e demonstrar o resultado no “valorfinal” quando clicar no botão “btncalcular”.
+                </h5>
+
+                <div>
+                    Custo de Fábrica
+                    <input type="text" id="custoFabrica">
+                </div>
+                <div>
+                    Distribuidor
+                    <input type="text" id="percDistribuidor">
+                </div>
+                <div>
+                    Impostos
+                    <input type="text" id="percImpostos">
+                </div>
+
+                <button onclick="btncalcular()" class="tn btn-primary btn-lg m-3">calcular</button>
+                <div>
+                    Valor final: <input type="text" id="valorfinal" class="form-control  col-10">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
