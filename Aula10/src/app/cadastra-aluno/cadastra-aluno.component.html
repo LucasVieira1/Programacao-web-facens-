@@ -1,0 +1,15 @@
+<br>
+
+<div class="container">
+    <div class="row">
+        RA:
+        <input type="number" placeholder="ra*" name="ra" [(ngModel)]="ra" required>Nome:
+        <input type=" text " placeholder="nome*" name="nome " [(ngModel)]="nome" required>E-mail:
+        <input type="email " placeholder="email*" name="email " [(ngModel)]="email" required>Celular:
+        <input type="number" placeholder="celular*" name="celular " [(ngModel)]="celular" required>
+    </div>
+    <br>
+    <div class="row">
+        <button class="btn btn-primary" (click)="cadastrar()">cadastrar</button>
+    </div>
+</div>

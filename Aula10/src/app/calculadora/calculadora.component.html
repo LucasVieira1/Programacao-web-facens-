@@ -1,0 +1,16 @@
+<br>
+<div class="container">
+    <div class="row">
+        Numero 1:
+        <input type="number" placeholder="Num1" name="num1" [(ngModel)]="num1"> Numero 2:
+        <input type="number" placeholder="Num2" name="num2" [(ngModel)]="num2"> Resultado:
+        <input name="resultado" [(ngModel)]="resultado">
+    </div>
+    <br>
+    <div class="inline-block">
+        <button class="btn btn-primary" (click)=" somar() ">Somar</button>
+        <button class="btn btn-secondary" (click)=" subtrair() ">Subtrair</button>
+        <button class="btn btn-primary" (click)=" dividir() ">Dividir</button>
+        <button class="btn btn-secondary" (click)=" multiplicar() ">Multiplicar</button>
+    </div>
+</div>

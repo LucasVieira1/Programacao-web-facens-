@@ -1,0 +1,22 @@
+<br>
+
+<div class="container">
+    <div class="row">
+        Nome do segurado:
+        <input type="text" placeholder="nome*" name="nome" [(ngModel)]="nome" required>Sexo:
+        <select name="" id="" [(ngModel)]="sexo" required><option value="M">Masculino</option><option value="F">Feminino</option></select>Idade
+        <input type="number" placeholder="idade*" name="idade" [(ngModel)]="idade" required>Valor do automovel:
+        <input type="number" placeholder="valor*" name="valor" [(ngModel)]="valor" required>
+    </div>
+    <br>
+    <div class="row">
+        <button class="btn btn-primary" (click)="calcular()">Calcular</button>
+
+    </div>
+    <br>
+    <div class="row">
+        Valor da apólice de seguro:
+        <input type="text" placeholder="apolice*" name="apolice " [(ngModel)]="apolice" required>
+
+    </div>
+</div>
